@@ -5,7 +5,7 @@ exclude_groups:
   - ungrouped
   - RivasVaciamadrid
   - Arganda
-  - Moncloa
+#  - Moncloa
   - Lavapies
   - MadridCapital
 #  - MadridComunidad
