@@ -21,3 +21,13 @@
         tower_username: "{{ lookup('env', 'TOWER_USERNAME') }}"
         tower_password: "{{ lookup('env', 'TOWER_PASSWORD') }}"
         tower_host: "{{ lookup('env', 'TOWER_HOST') }}"
+
+    - name: Getting Job Template info
+      tower_receive:
+        job_template:
+          - "[Production] VLAN Creation"
+      register: jt
+
+    - name: Show config for [Production] VLAN Creation
+      debug:
+        var: "{{ jt }}"
