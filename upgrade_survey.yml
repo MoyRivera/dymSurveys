@@ -11,8 +11,8 @@
       tower_job_template:
         name: "[Production] VLAN Creation"
         job_type: "run"
-        inventory: "Networking inventory"
-        project: "Dynamic Surveys and Inventories"
+        inventory: "Networking Inventory"
+        project: "Dynamic Surveys"
         playbook: "VLAN.yml"
         credential: "Machine Credential"
         survey_enabled: true
