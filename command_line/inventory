@@ -1,0 +1,17 @@
+[RivasVaciamadrid] 
+machine001.skynet.com
+machine002.skynet.com
+
+[Moncloa]
+machine003.skynet.com
+
+[Lavapies]
+machine004.skynet.com
+
+[MadridCapital:children]
+Moncloa
+Lavapies
+
+[MadridComunidad:children]
+MadridCapital
+RivasVaciamadrid

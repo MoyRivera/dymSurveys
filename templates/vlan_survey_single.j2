@@ -1,0 +1,32 @@
+{
+  "name": "VLAN Survey",
+  "description": "Choose location and VLAN ID",
+  "spec": [
+    {
+      "type": "multiplechoice",
+      "question_name": "Choose location/environment",
+      "question_description": "Choose the location where to create de VLAN",
+      "variable": "location",
+      "choices": [
+{% for x in groups.keys() %}
+{% if x in exclude_groups %}
+{% else %}
+{% if loop.last %}
+        "{{x}}"
+{% else %}
+        "{{x}}",
+{% endif %}
+{% endif %}
+{% endfor %}
+      ],
+      "required": true,
+    },
+    {
+      "type": "text",
+      "question_name": "VLAN ID",
+      "question_description": "Type the VLAN id",
+      "variable": "vlan_id",
+      "required": true,
+    }
+  ]
+}

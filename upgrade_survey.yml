@@ -1,0 +1,23 @@
+---
+  - hosts: localhost
+    gather_facts: no
+
+    vars_files:
+      - "exclude_groups.yml"
+
+    tasks:
+
+    - name: Upgrading VLAN creation Job Template
+      tower_job_template:
+        name: "[Production] VLAN Creation"
+        job_type: "run"
+        inventory: "Networking inventory"
+        project: "Dynamic Surveys and Inventories"
+        playbook: "VLAN.yml"
+        credential: "Machine Credential"
+        survey_enabled: true
+        survey_spec: "{{ lookup('template', './templates/vlan_survey_{{ kind }}.j2') }}"
+        validate_certs: no
+        tower_username: "{{ lookup('env', 'TOWER_USERNAME') }}"
+        tower_password: "{{ lookup('env', 'TOWER_PASSWORD') }}"
+        tower_host: "{{ lookup('env', 'TOWER_HOST') }}"

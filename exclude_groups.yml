@@ -1,0 +1,7 @@
+---
+# List to exclude groups in the survey
+exclude_groups: 
+  - all
+  - ungrouped
+  - Lavapies
+...

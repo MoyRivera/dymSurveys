@@ -1,0 +1,22 @@
+---
+  - hosts: localhost
+    gather_facts: no
+
+    vars_files:
+      - "./config.txt"
+
+    tasks:
+
+    - name: Print groups
+      debug: 
+        var: groups.keys()
+
+    - name: Delete file
+      file: 
+        name: ./output.txt
+        state: absent
+
+    - name: Write to file
+      template:
+        src: ./template.j2
+        dest: ./output.txt

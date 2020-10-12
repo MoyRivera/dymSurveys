@@ -1,0 +1,21 @@
+{
+  "name": "VLAN Survey",
+  "description": "Choose location and VLAN ID",
+  "spec": [
+    {
+      "type": "multiselect",
+      "question_name": "Choose location/environment",
+      "question_description": "Choose the location where to create de VLAN",
+      "variable": "location",
+      "required": true,
+      "choices": "
+all\nungrouped\nRivasVaciamadrid\nMoncloa\nLavapies\nMadridCapital\nMadridComunidad\n    },
+    {
+      "type": "integer",
+      "question_name": "VLAN ID",
+      "question_description": "Type the VLAN id",
+      "variable": "vlan_id",
+      "required": true,
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{% for x in groups.keys() %}
+{% if x in exclude_groups %}
+{% else %}
+{{ x }}
+{% endif %}
+{% endfor %}
