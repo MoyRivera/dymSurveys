@@ -22,10 +22,10 @@
         tower_password: "{{ lookup('env', 'TOWER_PASSWORD') }}"
         tower_host: "{{ lookup('env', 'TOWER_HOST') }}"
 
-    - name: Getting Job Template info
-      tower_receive:
-        job_template:
-          - "[Production] VLAN Creation"
+#    - name: Getting Job Template info
+#      tower_receive:
+#        job_template:
+#          - "[Production] VLAN Creation"
 
     - name: Creating the new role for the Job Template
       tower_role:
@@ -37,7 +37,7 @@
         tower_password: "{{ lookup('env', 'TOWER_PASSWORD') }}"
         tower_host: "{{ lookup('env', 'TOWER_HOST') }}"
 
-    - name: Getting Job Template info
-      tower_receive:
-        job_template:
-          - "[Production] VLAN Creation"
+#    - name: Getting Job Template info
+#      tower_receive:
+#        job_template:
+#          - "[Production] VLAN Creation"
