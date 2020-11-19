@@ -7,6 +7,6 @@ exclude_groups:
 #  - Arganda
   - Moncloa
 #  - Lavapies
-#  - MadridCapital
-#  - MadridComunidad
+  - MadridCapital
+  - MadridComunidad
 ...
